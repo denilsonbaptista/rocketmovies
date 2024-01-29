@@ -25,11 +25,15 @@ export default createGlobalStyle`
     font-family: 'Roboto Slab', serif;
     font-size: 1.6rem;
     outline: none;
+
+    color: ${({ theme }) => theme.COLORS.WHITE_100};
   }
 
   .wrapper {
     width: min(150rem, 90%);
     justify-self: center;
+
+    grid-area: content;
   }
 
   a {

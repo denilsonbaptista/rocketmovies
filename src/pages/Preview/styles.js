@@ -13,8 +13,6 @@ export const Container = styled.div`
   > main {
     padding-top: 4rem;
 
-    grid-area: content;
-
     a {
       color: ${({ theme }) => theme.COLORS.PINK};
       font-size: 1.6rem;

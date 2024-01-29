@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div`
   flex: 1;
 
-  padding: 1.9rem 2.4rem;
+  padding: 1.9rem 1.6rem;
 
   border-radius: 1rem;
   background-color: ${({ theme }) => theme.COLORS.GRAY_700};
@@ -27,5 +27,13 @@ export const Container = styled.div`
     &:placeholder {
       color: ${({ theme }) => theme.COLORS.GRAY_300};
     }
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    border: 0;
+    background: transparent;
   }
 `
