@@ -11,9 +11,10 @@ export const Container = styled.div`
     "content";
 
   > main {
-    grid-area: content;
+    margin: 4rem 0 2.6rem 0;
 
-    margin: 4rem 0;
+    display: grid;
+    grid-template-rows: max-content auto;
 
     a {
       color: ${({ theme }) => theme.COLORS.PINK};
@@ -30,7 +31,6 @@ export const Container = styled.div`
     fieldset {
       padding-right: 1.6rem;
 
-      height: 70vh;
       overflow-y: auto;
 
       border: none;

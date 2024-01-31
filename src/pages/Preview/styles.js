@@ -13,6 +13,9 @@ export const Container = styled.div`
   > main {
     padding-top: 4rem;
 
+    display: grid;
+    grid-template-rows: max-content auto;
+
     a {
       color: ${({ theme }) => theme.COLORS.PINK};
       font-size: 1.6rem;
@@ -25,10 +28,9 @@ export const Container = styled.div`
   }
 `
 export const Content = styled.div`
-  margin-top: 2.4rem;
+  margin: 2.4rem 0 2.4rem 0;
   padding-right: 1.6rem;
 
-  height: 70vh;
   overflow-y: auto;
 `
 
