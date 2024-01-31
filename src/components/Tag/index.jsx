@@ -1,6 +1,6 @@
 import { Container } from "./styles"
 
-export function Tag({ isPreview, title, ...rest }) {
+export function Tag({ isPreview = false, title, ...rest }) {
   return (
     <Container isPreview={isPreview} {...rest}>
       {title}

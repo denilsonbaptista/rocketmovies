@@ -106,9 +106,9 @@ export function Preview() {
           </For>
 
           <Tags>
-            <Tag title="Ficção Científica" />
-            <Tag title="Drama" />
-            <Tag title="Família" />
+            <Tag title="Ficção Científica" isPreview />
+            <Tag title="Drama" isPreview />
+            <Tag title="Família" isPreview />
           </Tags>
 
           <Description>
