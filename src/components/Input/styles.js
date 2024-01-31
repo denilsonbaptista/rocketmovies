@@ -2,11 +2,17 @@ import styled from "styled-components"
 
 export const Container = styled.div`
   flex: 1;
+  display: flex;
+  gap: 1.2rem;
 
   padding: 1.9rem 1.6rem;
 
   border-radius: 1rem;
   background-color: ${({ theme }) => theme.COLORS.GRAY_700};
+
+  svg {
+    color: ${({ theme }) => theme.COLORS.GRAY_300};
+  }
 
   > input,
   &:placeholder {
