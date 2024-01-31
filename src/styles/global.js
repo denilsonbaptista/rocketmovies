@@ -16,9 +16,7 @@ export default createGlobalStyle`
 
   body {
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-    color: ${({ theme }) => theme.COLORS.WHITE_100};
-    
-    overflow: hidden;
+    color: ${({ theme }) => theme.COLORS.WHITE_100};    
   }
 
   body, input, button, textarea {
@@ -34,6 +32,8 @@ export default createGlobalStyle`
     justify-self: center;
 
     grid-area: content;
+
+    overflow-y: auto;
   }
 
   a {

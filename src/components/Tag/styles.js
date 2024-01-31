@@ -8,6 +8,6 @@ export const Container = styled.span`
   padding: 0.8rem 1.6rem;
 
   border-radius: 0.8rem;
-  background-color: ${({ theme, isPreview }) =>
-    isPreview ? theme.COLORS.BACKGROUND_500 : theme.COLORS.BACKGROUND_400};
+  background-color: ${({ theme, $isPreview }) =>
+    $isPreview ? theme.COLORS.BACKGROUND_500 : theme.COLORS.BACKGROUND_400};
 `
