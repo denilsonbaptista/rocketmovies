@@ -1,9 +1,11 @@
-import { BsArrowLeft } from "react-icons/bs"
+import { Link } from "react-router-dom"
 import { LuClock3 } from "react-icons/lu"
+import { BsArrowLeft } from "react-icons/bs"
+
 import { Container, Content, Title, For, Tags, Description } from "./styles"
 
-import { Header } from "../../components/Header"
 import { Tag } from "../../components/Tag"
+import { Header } from "../../components/Header"
 
 export function Preview() {
   return (
@@ -11,9 +13,9 @@ export function Preview() {
       <Header />
 
       <main className="wrapper">
-        <a href="#">
+        <Link to="/">
           <BsArrowLeft /> Voltar
-        </a>
+        </Link>
 
         <Content>
           <Title>

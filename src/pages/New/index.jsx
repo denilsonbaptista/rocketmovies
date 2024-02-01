@@ -1,4 +1,6 @@
 import { BsArrowLeft } from "react-icons/bs"
+import { Link } from "react-router-dom"
+
 import { Container, Form } from "./styles"
 
 import { Header } from "../../components/Header"
@@ -14,9 +16,9 @@ export function New() {
       <Header />
 
       <main className="wrapper">
-        <a href="#">
+        <Link to="/">
           <BsArrowLeft /> Voltar
-        </a>
+        </Link>
 
         <fieldset>
           <Form>

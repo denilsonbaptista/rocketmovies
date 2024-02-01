@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 import { Container, Profile, Logout } from "./styles"
 
 import { Input } from "../Input"
@@ -6,9 +8,9 @@ export function Header() {
   return (
     <Container>
       <div className="wrapper">
-        <a href="#">
+        <Link to="/">
           <span>RocketMovies</span>
-        </a>
+        </Link>
 
         <Input
           placeholder="Pesquisar pelo título"
@@ -17,7 +19,7 @@ export function Header() {
           role="search"
         />
 
-        <Profile>
+        <Profile to="/profile">
           <div>
             <strong>Denilson Baptista</strong>
             <Logout>Sair</Logout>

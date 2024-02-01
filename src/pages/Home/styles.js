@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 export const Container = styled.div`
   width: 100%;
@@ -37,4 +38,22 @@ export const Content = styled.div`
     overflow-y: auto;
     padding-right: 1.6rem;
   }
+`
+
+export const Newnote = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+
+  font-weight: 500;
+
+  width: 20.7rem;
+  background-color: ${({ theme }) => theme.COLORS.PINK};
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_400};
+
+  height: 5.6rem;
+
+  border: none;
+  border-radius: 1rem;
 `
