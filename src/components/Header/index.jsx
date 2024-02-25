@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/auth'
 
 import { Container, Profile, Logout } from './styles'
@@ -7,6 +7,12 @@ import { Input } from '../Input'
 
 export function Header() {
   const { signOut } = useAuth()
+  const navigate = useNavigate()
+
+  function handleSingOut() {
+    navigate('/')
+    signOut()
+  }
 
   return (
     <Container>
@@ -25,7 +31,7 @@ export function Header() {
         <Profile>
           <div>
             <strong>Denilson Baptista</strong>
-            <Logout onClick={signOut}>Sair</Logout>
+            <Logout onClick={handleSingOut}>Sair</Logout>
           </div>
 
           <Link to="/profile">
