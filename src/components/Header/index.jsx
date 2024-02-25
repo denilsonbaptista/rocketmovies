@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
+import { useAuth } from '../../hooks/auth'
 
-import { Container, Profile, Logout } from "./styles"
+import { Container, Profile, Logout } from './styles'
 
-import { Input } from "../Input"
+import { Input } from '../Input'
 
 export function Header() {
+  const { signOut } = useAuth()
+
   return (
     <Container>
       <div className="wrapper">
@@ -19,16 +22,18 @@ export function Header() {
           role="search"
         />
 
-        <Profile to="/profile">
+        <Profile>
           <div>
             <strong>Denilson Baptista</strong>
-            <Logout>Sair</Logout>
+            <Logout onClick={signOut}>Sair</Logout>
           </div>
 
-          <img
-            src="https://github.com/denilsonbaptista.png"
-            alt="Foto do usuário"
-          />
+          <Link to="/profile">
+            <img
+              src="https://github.com/denilsonbaptista.png"
+              alt="Foto do usuário"
+            />
+          </Link>
         </Profile>
       </div>
     </Container>

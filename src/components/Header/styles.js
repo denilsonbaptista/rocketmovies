@@ -1,5 +1,4 @@
-import styled from "styled-components"
-import { Link } from "react-router-dom"
+import styled from 'styled-components'
 
 export const Container = styled.header`
   grid-area: header;
@@ -31,7 +30,7 @@ export const Container = styled.header`
   }
 `
 
-export const Profile = styled(Link)`
+export const Profile = styled.span`
   display: flex;
   align-items: center;
   gap: 0.9rem;
@@ -51,7 +50,7 @@ export const Profile = styled(Link)`
     }
   }
 
-  > img {
+  > a img {
     width: 6.4rem;
     height: 6.4rem;
 
