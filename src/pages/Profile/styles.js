@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
@@ -6,15 +6,15 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 14.4rem auto;
   grid-template-areas:
-    "header"
-    "content";
+    'header'
+    'content';
 
   > header {
     grid-area: header;
 
     background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
-    > a {
+    > button {
       display: flex;
       align-items: center;
       gap: 0.8rem;
@@ -22,8 +22,10 @@ export const Container = styled.div`
       height: 100%;
       margin-left: 14.4rem;
 
-      font-family: "Roboto Slab";
+      font-family: 'Roboto Slab';
       color: ${({ theme }) => theme.COLORS.PINK};
+      background-color: transparent;
+      border: none;
     }
   }
 `
