@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.button`
   display: flex;
@@ -20,6 +20,14 @@ export const Container = styled.button`
 
   .rating {
     margin-top: 0.8rem;
+
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  img {
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   > p {

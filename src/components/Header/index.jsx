@@ -8,7 +8,7 @@ import { Container, Profile, Logout } from './styles'
 
 import { Input } from '../Input'
 
-export function Header() {
+export function Header({ onChange }) {
   const { user, signOut } = useAuth()
   const navigate = useNavigate()
 
@@ -33,6 +33,7 @@ export function Header() {
           type="search"
           autoComplete="off"
           role="search"
+          onChange={onChange}
         />
 
         <Profile>

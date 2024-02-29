@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from 'react-router-dom'
 
-import { New } from "../pages/New"
-import { Home } from "../pages/Home"
-import { Profile } from "../pages/Profile"
-import { Preview } from "../pages/Preview"
+import { New } from '../pages/New'
+import { Home } from '../pages/Home'
+import { Profile } from '../pages/Profile'
+import { Preview } from '../pages/Preview'
 
 export function AppRoutes() {
   return (
@@ -11,7 +11,7 @@ export function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/new" element={<New />} />
       <Route path="/profile" element={<Profile />} />
-      <Route path="/preview" element={<Preview />} />
+      <Route path="/preview/:id" element={<Preview />} />
     </Routes>
   )
 }
