@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
@@ -7,8 +7,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 12rem auto;
   grid-template-areas:
-    "header"
-    "content";
+    'header'
+    'content';
 
   > main {
     padding-top: 4rem;
@@ -50,9 +50,12 @@ export const Title = styled.div`
     align-items: center;
     gap: 1rem;
 
-    span {
+    img {
       display: flex;
       align-items: center;
+
+      width: 2rem;
+      height: 2rem;
     }
   }
 `
@@ -87,6 +90,6 @@ export const Description = styled.p`
 
   color: ${({ theme }) => theme.COLORS.WHITE_200};
   text-align: justify;
-  font-family: "Roboto Slab";
+  font-family: 'Roboto Slab';
   font-weight: 400;
 `

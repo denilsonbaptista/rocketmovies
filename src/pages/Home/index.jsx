@@ -9,6 +9,7 @@ import { Container, Content, Newnote } from './styles'
 
 import { Header } from '../../components/Header'
 import { Note } from '../../components/Note'
+import { set } from 'date-fns'
 
 export function Home() {
   const [search, setSeach] = useState('')
@@ -18,6 +19,18 @@ export function Home() {
 
   function handleDescription(id) {
     navigate(`/preview/${id}`)
+  }
+
+  async function handleDeleteNote(event, id) {
+    event.preventDefault()
+
+    const shouldDelete = window.confirm('Deseja excluir este filme?')
+
+    if (shouldDelete) {
+      await api.delete(`notes/${id}`)
+
+      setNotes(notes.filter(note => note.id !== id))
+    }
   }
 
   useEffect(() => {
@@ -49,6 +62,7 @@ export function Home() {
               key={String(note.id)}
               data={note}
               onClick={() => handleDescription(note.id)}
+              onContextMenu={() => handleDeleteNote(event, note.id)}
             />
           ))}
         </div>
