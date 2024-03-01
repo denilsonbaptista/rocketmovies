@@ -32,6 +32,10 @@ export function New() {
     setNewTag('')
   }
 
+  function handleBack() {
+    navigate(-1)
+  }
+
   async function handleNewNote(event) {
     event.preventDefault()
 
@@ -112,8 +116,8 @@ export function New() {
             </Section>
 
             <div className="buttons">
-              <Button title="Excluir filme" isDelete />
-              <Button title="Salvar alterações" type="submit" />
+              <Button title="Desfazer" onClick={handleBack} isDelete />
+              <Button title="Salvar" type="submit" />
             </div>
           </Form>
         </fieldset>
