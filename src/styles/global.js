@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
+import { DEVICE_BREAKPOINTS } from '../styles/deviceBreakpoints'
 
 export default createGlobalStyle`
   * {
@@ -63,4 +64,9 @@ export default createGlobalStyle`
     border-radius: 0.8rem;
     cursor: move;
   }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
+    font-size: 1.2rem;
+  }
+
 `
