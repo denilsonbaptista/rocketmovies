@@ -68,5 +68,4 @@ export default createGlobalStyle`
   @media (max-width: ${DEVICE_BREAKPOINTS.LG}) {
     font-size: 1.2rem;
   }
-
 `

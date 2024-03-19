@@ -1,5 +1,6 @@
-import styled from "styled-components"
-import { Link } from "react-router-dom"
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints'
 
 export const Container = styled.div`
   width: 100%;
@@ -8,8 +9,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 12rem auto;
   grid-template-areas:
-    "header"
-    "content";
+    'header'
+    'content';
 `
 
 export const Content = styled.div`
@@ -20,11 +21,18 @@ export const Content = styled.div`
 
   > header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-right: 1.6rem;
 
     button {
       width: 21rem;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      h1 {
+        font-size: 2.8rem;
+      }
     }
   }
 
@@ -56,4 +64,12 @@ export const Newnote = styled(Link)`
 
   border: none;
   border-radius: 1rem;
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    width: 16rem;
+    height: initial;
+
+    padding: 1.5rem 1rem;
+    font-size: 1.5rem;
+  }
 `
