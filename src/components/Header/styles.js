@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints'
 
 export const Container = styled.header`
   grid-area: header;
@@ -26,6 +27,14 @@ export const Container = styled.header`
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+    }
+
+    @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+      .logo {
+        display: none;
+      }
+
+      gap: 3rem;
     }
   }
 `
@@ -56,6 +65,12 @@ export const Profile = styled.span`
 
     border-radius: 50%;
     border: 1px solid ${({ theme }) => theme.COLORS.GRAY_500};
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    > div strong {
+      display: none;
+    }
   }
 `
 

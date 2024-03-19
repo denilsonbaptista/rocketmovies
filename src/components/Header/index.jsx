@@ -24,7 +24,7 @@ export function Header({ onChange }) {
   return (
     <Container>
       <div className="wrapper">
-        <Link to="/">
+        <Link to="/" className="logo">
           <span>RocketMovies</span>
         </Link>
 
