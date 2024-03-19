@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints'
 
 export const Container = styled.button`
   display: flex;
@@ -40,5 +41,11 @@ export const Container = styled.button`
   footer {
     display: flex;
     gap: 0.8rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    > header h2 {
+      font-size: 2rem;
+    }
   }
 `

@@ -1,4 +1,5 @@
-import styled from "styled-components"
+import styled from 'styled-components'
+import { DEVICE_BREAKPOINTS } from '../../styles/deviceBreakpoints'
 
 export const Container = styled.div`
   width: 100%;
@@ -7,8 +8,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 12rem auto;
   grid-template-areas:
-    "header"
-    "content";
+    'header'
+    'content';
 
   > main {
     margin: 4rem 0 2.6rem 0;
@@ -74,5 +75,11 @@ export const Form = styled.form`
   .buttons {
     display: flex;
     gap: 4rem;
+  }
+
+  @media (max-width: ${DEVICE_BREAKPOINTS.MD}) {
+    > header h1 {
+      font-size: 2.8rem;
+    }
   }
 `
